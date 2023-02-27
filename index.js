@@ -30,13 +30,14 @@ console.log('örnek görev:', ilkiniDon(['as','sa'],function(metin){return metin
   Aşağıdaki skor1 ve skor2 kodlarını inceleyiniz ve aşağıdaki soruları altına not alarak cevaplayın
   
   1. skor1 ve skor2 arasındaki fark nedir?
-  
+     "skor1"de local scope, "skor2"de ise global scope kullanılmıştır. Ayrıca "skor1"de fonksiyon içinde fonksiyon kapsüllemesi yapılarak Closure kavramına yer verilmiştir.
   2. Hangisi bir closure kullanmaktadır? Nasıl tarif edebilirsin? (yarınki derste öğreneceksin :) )
-     "skor1" kodların Closure kullanılmıştır çünkü Closure tanımı gereği onksiyonlarda kullanacak değerler 
+     "skor1" kodları Closure kullanılmıştır çünkü Closure tanımı gereği fonksiyonlarda kullanacak değerler 
      ve diğer minik fonksiyonların, javascript tarafından ana fonksiyonla beraber paketlenmesi anlamına gelir.
      Burada da ana fonksiyon olan skorArtirici()'nın içinde yavru fonksiyon olan skorGuncelle() fonksiyonu kapsüllenmiştir.
   3. Hangi durumda skor1 tercih edilebilir? Hangi durumda skor2 daha mantıklıdır?
-*/
+*/   /*"skor1" hali hazırda devam eden, iki yarı yada fazla bölümden oluşan bir müsabaka için uygun olabilir. 
+      "skor2" ise oynanıp biten fakat eleme usulü gerçekleşen rövanş niteliğindeki müsabakalarda daha geçerli olabilir.*/  
 
 // skor1 kodları
 function skorArtirici() {
