@@ -157,7 +157,7 @@ MAÇ UZAR ise skorTabelasi(periyotSkoru,takimSkoru,4)
 // NOTE: Bununla ilgili bir test yoktur. Eğer logladığınız sonuçlar yukarıdakine benziyor ise tmamlandı sayabilirsiniz.
 
 function skorTabelasi(/*Kodunuzu buraya yazınız*/) {
-  /*Kodunuzu buraya yazınız*/
+  /*Kodunuzu buraya yazınız*/ //İncelenip çözülecek!!!
 }
 
 
