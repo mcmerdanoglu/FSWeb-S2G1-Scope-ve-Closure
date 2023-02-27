@@ -32,7 +32,9 @@ console.log('örnek görev:', ilkiniDon(['as','sa'],function(metin){return metin
   1. skor1 ve skor2 arasındaki fark nedir?
   
   2. Hangisi bir closure kullanmaktadır? Nasıl tarif edebilirsin? (yarınki derste öğreneceksin :) )
-  
+     "skor1" kodların Closure kullanılmıştır çünkü Closure tanımı gereği onksiyonlarda kullanacak değerler 
+     ve diğer minik fonksiyonların, javascript tarafından ana fonksiyonla beraber paketlenmesi anlamına gelir.
+     Burada da ana fonksiyon olan skorArtirici()'nın içinde yavru fonksiyon olan skorGuncelle() fonksiyonu kapsüllenmiştir.
   3. Hangi durumda skor1 tercih edilebilir? Hangi durumda skor2 daha mantıklıdır?
 */
 
@@ -65,7 +67,7 @@ Not: Bu fonskiyon, aşağıdaki diğer görevler için de bir callback fonksiyon
 */
 
 function takimSkoru(/*Kodunuzu buraya yazınız*/){
-    /*Kodunuzu buraya yazınız*/
+    /*Kodunuzu buraya yazınız*/ return Math.floor(Math.random()*15+10)
 }
 
 
@@ -79,17 +81,22 @@ Aşağıdaki macSonucu() fonksiyonununda aşağıdakileri yapınız:
   4. Her oynanan çeyrekten sonra EvSahibi ve KonukTakim için skoru güncelleyin
   5. Son çeyrekten sonra, maçın bitiş skorunu bir object olarak dönün(return)
 
-  Örneğin: macSonucu(takimSkoru, 4) çalıştırınca aşağıdaki object'i dönmeli
+  Örneğin: takimSkoru; çalıştırınca aşağıdaki object'i dönmeli
 {
   "EvSahibi": 92,
   "KonukTakim": 80
 }
 */ 
 
-function macSonucu(/*Kodunuzu buraya yazınız*/){
+function macSonucu(takimSkoru, ceyrekNo){
   /*Kodunuzu buraya yazınız*/
+  let guncellenekSkor ={EvSahibi: 0,  KonukTakim: 0}
+  for(let i=0;i<ceyrekNo;i++) {
+    guncellenekSkor.EvSahibi+=takimSkoru();
+    guncellenekSkor.KonukTakim+=takimSkoru();}
+   return guncellenekSkor; 
 }
-
+console.log(macSonucu(takimSkoru, 4))
 
 
 
