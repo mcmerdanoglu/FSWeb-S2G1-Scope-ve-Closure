@@ -116,11 +116,13 @@ Aşağıdaki periyotSkoru() fonksiyonununda aşağıdakileri yapınız:
   */
 
 
-function periyotSkoru(/*Kodunuzu buraya yazınız*/) {
-  /*Kodunuzu buraya yazınız*/
-
+function periyotSkoru(takimSkoru) {
+  /*Kodunuzu buraya yazınız*/let quarterScore ={};
+  quarterScore.EvSahibi=takimSkoru();
+  quarterScore.KonukTakim=takimSkoru();
+  return quarterScore; 
 }
-
+console.log(periyotSkoru(takimSkoru));
 
 /* Zorlayıcı Görev 5: skorTabelasi() 
 Aşağıdaki skorTabelasi() fonksiyonunu kullanarak aşağıdakileri yapınız:
